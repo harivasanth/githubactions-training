@@ -1,7 +1,8 @@
 name: Test demo
 on: 
   push:
-    branches: [ main ]
+    branches:
+      - main
     paths-ignore: [.github/**]
   pull_request:
     branches: [ main ]
@@ -12,9 +13,9 @@ jobs:
   Build:
     runs-on: ubuntu-latest
     steps:
-      - run: 
-          echo "🎉 The job was triggered by event: ${{ github.event_name }}"
-          echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ."
+      - run: |
+          echo "🎉 The job was triggered by event: ${{ github.event_name }}"
+          echo "🔎 The name of your branch is ${{ github.ref }} and your repository is ."
 
       - uses: actions/checkout@v3.3.0
 
